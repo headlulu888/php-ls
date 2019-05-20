@@ -1,13 +1,19 @@
 <?php
 
-$age = rand(1, 100);
+$day = date('6');
 
-if ($age >= 18 && $age <= 65) {
-    echo "Вам еще работать и работать";
-} else if ($age >= 65) {
-    echo "Вам пора на пенсию";
-} else if ($age >= 1 && $age <= 17) {
-    echo "Вам ещё рано работать";
-} else {
-    echo "Неизвестный возраст”";
+switch ($day) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        echo "Это рабочий день”";
+        break;
+    case 6:
+    case 6:
+        echo "Это выходной день";
+        break;
+    default:
+        echo "Неизвестный день";
 }
