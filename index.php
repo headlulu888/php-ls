@@ -1,14 +1,9 @@
 <?php
 
-const testConstanta = 'asd';
+$name = "Ray";
+$age = 26;
 
-$user_name = "Igor";
+echo "Меня зовут: {$name}\n";
+echo "Мне {$age} лет\n";
 
-function show_something()
-{
-    return "Something";
-}
-
-if (1 == 1) {
-    echo "hi";
-}
+echo "\"!|/\'\"/";
