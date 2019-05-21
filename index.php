@@ -17,14 +17,17 @@ require_once "./function.php";
   */
 
   /**
-   * 
    * Задание 3
    * 
-   * 
-   * 
+   * task3(3, 4);
    */
  
-   task3(3, 4);
+   /**
+    * Задача 4 
+    *
+    */
+   
+    echo task4();
 
 
 

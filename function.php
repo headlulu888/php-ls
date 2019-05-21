@@ -63,4 +63,13 @@ function task3($firstNum, $secondNum) {
     }
 }
 
+// Задача 4
+function task4() {
+    $today = date("m.d.y H:i");
+    $date = '24.02.2016 00:00:00';
+
+    echo $today . "<br>";
+    echo strtotime($date);
+}
+
 ?>
