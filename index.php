@@ -25,10 +25,22 @@ require_once "./function.php";
    /**
     * Задача 4 
     *
+    * echo task4();
     */
    
-    echo task4();
+    /**
+     * Задача 5
+     * 
+     * task5();
+     */
 
+     /**
+     * Задача 6
+     * 
+     * task6('text');
+     */
+
+     
 
 
 ?>

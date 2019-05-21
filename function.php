@@ -72,4 +72,24 @@ function task4() {
     echo strtotime($date);
 }
 
+// Задача 5
+function task5() {
+    $str1 = 'Карл у Клары украл Кораллы';
+    $str2 = 'Две бутылки лимонада';
+
+    $newStr1 = str_replace('К', '', $str1);
+    $newStr2 = str_replace('Две', 'Три', $str2);
+
+    echo 'Была строка ' . $str1 . ' - ' . 'а стала ' . $newStr1 . "<br>";
+    echo 'Была строка ' . $str2 . ' - ' . 'а стала ' . $newStr2;
+}
+
+// Задача 6
+function task6($fileName) {
+    $fileName = $fileName . 'txt';
+    $fileText = "Hello again!";
+    file_put_contents($fileName, $fileText);
+    echo file_get_contents($fileName);
+}
+
 ?>
