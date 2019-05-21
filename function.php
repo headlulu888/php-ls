@@ -1,6 +1,6 @@
 <?php
 
-// Задача 1
+// Задача 1 (fix)
 function task1($array, $clue = false) {
     if ($clue == true) {
         $str = "";
