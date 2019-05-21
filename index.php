@@ -10,8 +10,21 @@ require_once "./function.php";
  * echo task1($arrayStr, true);
  */
 
+ /**
+  * Задание 2
+  *
+  * echo task22('/', 1, 2, 0);
+  */
+
+  /**
+   * 
+   * Задание 3
+   * 
+   * 
+   * 
+   */
  
- echo task22('/', 1, 2, 0);
+   task3(3, 4);
 
 
 

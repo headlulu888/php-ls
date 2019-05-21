@@ -18,18 +18,6 @@ function task1($array, $clue = false) {
 }
 
 // Задача 2
-function task2($operation, ...$params) {
-    $str = "";
-
-    foreach($params as $par) {
-        $str .= $par . " + ";   
-    }
-
-    $str1 = rtrim($str, ' + ');
-
-    return "Результат: " . $str1;
-}
-
 function task22($operation, ...$numbers) {
     if ($operation == '/' && in_array(0, $numbers)) {
         echo "Делить на 0 нельзя!";
@@ -53,6 +41,26 @@ function task22($operation, ...$numbers) {
     $result = implode($operation, $numbers);
 
     echo "Результат: " . $result . " = " . eval('return ' . $result . ';');
+}
+
+// Задача 3
+function task3($firstNum, $secondNum) {
+    if (is_int($firstNum) && is_int($secondNum)) {
+        echo "<table>";
+
+        for($i = 1; $i <= $firstNum; $i++) {
+            echo "<tr>";
+
+            for($j = 1; $j <= $secondNum; $j++) {
+                echo "<td style=\"border: 1px solid black;\">$j * $i = " . ($i * $j) . "</td>";
+            }
+
+            echo "</tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "Числа должны быть целыми!";
+    }
 }
 
 ?>
