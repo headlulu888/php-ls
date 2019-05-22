@@ -77,7 +77,7 @@ function task2() {
 
     $isRand = rand(0, 1);
 
-    if ($is_rand) {
+    if ($isRand) {
         $decoded_json[0]['name'] = 'Rodion';
         $decoded_json[0]['age'] = 27;
         $decoded_json[0]['year'] = 1991;
@@ -86,27 +86,34 @@ function task2() {
     } else {
         echo 'Изменения не проведены: ' . "<br>";
     }
+
     $encoded = json_encode($decoded_json);
     file_put_contents('output2.json', $encoded);
+
     // До с.да норм
     $read_output = file_get_contents('output.json');
     $decode_output = json_decode($read_output, true);
     $read_output2 = file_get_contents('output2.json');
     $decode_output2 = json_decode($read_output2, true);
+
     var_dump($decode_output);
     echo "<br>";
+
     var_dump($decode_output2);
     echo "<br>";
+
     var_dump($decode_output[0]['name']);
     echo "<br>";
+
     var_dump($decode_output2[0]['name']);
     echo "<br>";
-    // print_r($decode_output);
-    // print_r($decode_output2);
+
     $diff1 = array_diff_assoc($decode_output, $decode_output2);
     $diff2 = array_diff_assoc($decode_output2, $decode_output);
+
     var_dump($diff1);
     var_dump($diff2);
+    
     if (!empty($diff2)) {
         echo "<br>" . 'В файле output2.json имеются элементы отсутствующие в файле output.json';
         foreach ($diff2 as $key => $val) {
