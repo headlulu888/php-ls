@@ -1,46 +1,5 @@
 <?php
 
-require_once "./function.php";
+require_once "./src/function.php";
 
-/**
- * Задание 1
- * 
- * $arrayStr = ['first', 'second', 'third'];
- * 
- * echo task1($arrayStr, true);
- */
-
- /**
-  * Задание 2
-  *
-  * echo task22('/', 1, 2, 0);
-  */
-
-  /**
-   * Задание 3
-   * 
-   * task3(3, 4);
-   */
- 
-   /**
-    * Задача 4 
-    *
-    * echo task4();
-    */
-   
-    /**
-     * Задача 5
-     * 
-     * task5();
-     */
-
-     /**
-     * Задача 6
-     * 
-     * task6('text');
-     */
-
-     
-
-
-?>
+task1('./data.xml');
