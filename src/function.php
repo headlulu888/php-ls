@@ -113,13 +113,43 @@ function task2() {
 
     var_dump($diff1);
     var_dump($diff2);
-    
+
     if (!empty($diff2)) {
         echo "<br>" . 'В файле output2.json имеются элементы отсутствующие в файле output.json';
         foreach ($diff2 as $key => $val) {
             echo "<br>" . 'Ключ:  ' . $key . ' => ' . 'Значение: ' . $val . "<br>";
         }
     }
+}
+
+// Задание 3
+function task3()
+{
+    $array = [];
+
+    rand(1, 100);
+
+    for($i = 0; $i < 50; $i++) {
+        $array[$i] = (rand(1, 100));
+    }
+
+    $file = fopen('test.csv', 'w');
+    fputcsv($file, $array, ';');
+    fclose($file);
+
+    $file = fopen('test.csv', 'r');
+    fgetcsv($file, 10000, ';');
+    fclose($file);
+
+    $even = function($var) {
+        return (!($var & 1));
+    };
+
+    $evenArray = array_filter($array, $even);
+    $sum = array_sum($evenArray);
+
+    return $sum;
+
 }
 
 ?>
