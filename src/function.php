@@ -149,7 +149,21 @@ function task3()
     $sum = array_sum($evenArray);
 
     return $sum;
+}
 
+// Задание 4
+function task4()
+{
+    $url = 'https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json';
+    $stream = fopen($url, 'rb');
+    $content = stream_get_contents($stream);
+
+    $decodeContent = json_decode($content, true);
+    $res = [];
+    $res['title'] = $decodeContent['query']['pages']['15580374']['title'];
+    $res['pageid'] = $decodeContent['query']['pages']['15580374']['pageid'];
+
+    return $res;
 }
 
 ?>
